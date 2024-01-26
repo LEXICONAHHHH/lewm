@@ -5,6 +5,7 @@ int main()
 {
     const char* display_name = "Hello, world!";
 
-    XOpenDisplay(display_name);
+    display *XOpenDisplay(display_name)
+        char *display_name;
     return 0;
 }
