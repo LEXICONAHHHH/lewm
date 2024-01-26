@@ -7,7 +7,7 @@ int main()
 
     Display *XOpenDisplay(display_name);
 
-    printf(Display);
+    printf("%d\n", Display);
 
-    return Display;
+    return 0;
 }
