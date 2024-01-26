@@ -3,7 +3,8 @@
 
 int main()
 {
+    const char* display_name = "Hello, world!";
 
-    XOpenDisplay(XDisplayName);
+    XOpenDisplay(display_name);
     return 0;
 }
