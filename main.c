@@ -1,19 +1,50 @@
 #include <X11/Xlib.h>
 #include <stdio.h>
+#include <err.h>
+
+static Display* dpy;
+static int scr;
+static Window root;
+
+#define POSX   500
+#define POSY   500
+#define WIDTH  500
+#define HEIGHT 500
+#define BORDER 15
 
 int main()
 {
-    char* display_name = NULL;
+    Window win;
+    XEvent ev;
 
-    Display display = XOpenDisplay(display_name);
-
-    if (display == NULL)
+    if ((dpy = XOpenDisplay(NULL)) == NULL)
     {
-        printf("Failed to open display!");
-        return 1;
+        printf("Failed to open display! \n");
+        return -1;
     }
 
-    printf("Successfully opened a display!");
+    // Get default screen and root window
+
+    scr = DefaultScreen(dpy);
+    root = RootWindow(dpy, scr);
+
+    // Creating a simple window
+    win = XCreateSimpleWindow(dpy, root, POSX, POSY, WIDTH, HEIGHT, BORDER, BlackPixel(dpy, scr), WhitePixel(dpy, scr));
+    
+    // Map our window to display server
+    XMapWindow(dpy, win);
+
+    while (XNextEvent(dpy, &ev) == 0)
+    {
+
+    }
+
+    // unmap our simple window
+    XUnmapWindow(dpy, win);
+    XDestroyWindow(dpy, win);
+
+    // Close our connection with display server
+    XCloseDisplay(dpy);
 
     return 0;
 }
