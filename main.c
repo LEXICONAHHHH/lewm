@@ -3,10 +3,11 @@
 
 int main()
 {
-    const char* display_name = "Hello, world!";
+    const char* display_name = "lewm server";
 
-    Display *XOpenDisplay(display_name)
-        char *display_name;
-        
-    return 0;
+    Display *XOpenDisplay(display_name);
+
+    printf(Display);
+
+    return Display;
 }
