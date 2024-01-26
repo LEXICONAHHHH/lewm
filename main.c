@@ -3,11 +3,15 @@
 
 int main()
 {
-    const char* display_name = "lewm server";
+    char* display_name = NULL;
 
     Display *XOpenDisplay(display_name);
 
-    printf("%d\n", Display);
+    if (Display == NULL)
+    {
+        printf("Failed to open display!");
+        return 1;
+    }
 
     return 0;
 }
