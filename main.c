@@ -3,8 +3,6 @@
 
 int main()
 {
-    Display *XOpenDisplay(display_name)
-        char *display_name;
-
+    XOpenDisplay(display_name);
     return 0;
 }
