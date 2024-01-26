@@ -3,6 +3,7 @@
 
 int main()
 {
-    XOpenDisplay(display_name);
+
+    XOpenDisplay(XDisplayName);
     return 0;
 }
