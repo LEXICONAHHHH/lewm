@@ -13,5 +13,7 @@ int main()
         return 1;
     }
 
+    printf("Successfully opened a display!");
+
     return 0;
 }
