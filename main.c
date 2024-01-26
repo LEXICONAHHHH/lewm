@@ -5,9 +5,9 @@ int main()
 {
     char* display_name = NULL;
 
-    Display = OpenDisplay(display_name);
+    Display display = OpenDisplay(display_name);
 
-    if (*Display == NULL)
+    if (display == NULL)
     {
         printf("Failed to open display!");
         return 1;
