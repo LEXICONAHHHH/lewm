@@ -6,6 +6,5 @@ int main()
     Display *XOpenDisplay(display_name)
         char *display_name;
 
-    display_name = "Hello, world!";
     return 0;
 }
