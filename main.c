@@ -3,9 +3,7 @@
 
 int main()
 {
-    char* display_name = NULL;
-
-    Display *XOpenDisplay(display_name);
+    Display *XOpenDisplay(NULL);
 
     if (Display == NULL)
     {
