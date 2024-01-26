@@ -5,7 +5,7 @@ int main()
 {
     char* display_name = NULL;
 
-    Display display = OpenDisplay(display_name);
+    Display display = XOpenDisplay(display_name);
 
     if (display == NULL)
     {
