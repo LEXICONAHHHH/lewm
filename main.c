@@ -3,9 +3,11 @@
 
 int main()
 {
-    Display *XOpenDisplay(NULL);
+    char* display_name = NULL;
 
-    if (Display == NULL)
+    Display *XOpenDisplay(display_name);
+
+    if (*Display == NULL)
     {
         printf("Failed to open display!");
         return 1;
