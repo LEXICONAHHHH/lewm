@@ -1,4 +1,5 @@
 #include <X11/Xlib.h>
+#include <stdio.h>
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
     #define POSX   500
     #define WIDTH  400
     #define HEIGHT 400
-    #define BORDER = 15
+    #define BORDER 15
 
     if (display == NULL)
     { 
@@ -34,7 +35,7 @@ int main()
 
     while (XNextEvent(display, &ev) == 0)
     {
-        
+
     }
 
     /* Unmap our simple window */
