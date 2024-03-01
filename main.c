@@ -5,26 +5,14 @@
 int main()
 {
   // Open a display
-  Display = XOpenDisplay("simey:0");
+  Display* display = XOpenDisplay("simey:0");
 
-  if (Display == NULL)
+  if (display == NULL)
   {
       printf("Xorg server failed to open!\n");
       return -1;
   }
-  if (Display)
-    {
-      // Create the window
-      Window w = XCreateWindow(d, DefaultRootWindow(d), 0, 0, 200,
-			       100, 0, CopyFromParent, CopyFromParent,
-			       CopyFromParent, 0, 0);
-
-      // Show the window
-      XMapWindow(d, w);
-      XFlush(d);
-
-      // Sleep long enough to see the window.
-      sleep(10);
-    }
+  
+  printf("Xorg successfully opened!\n");
   return 0;
 }
