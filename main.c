@@ -1,9 +1,13 @@
 #include <X11/Xlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
-main()
+int main()
 {
-  // Open a display.
+
+
+
+  // Open a display
   Display *d = XOpenDisplay(0);
 
   if ( d )
