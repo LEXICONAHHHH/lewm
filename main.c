@@ -4,13 +4,15 @@
 
 int main()
 {
-
-
-
   // Open a display
-  Display *d = XOpenDisplay(0);
+  Display = XOpenDisplay("simey:0");
 
-  if ( d )
+  if (Display == NULL)
+  {
+      printf("Xorg server failed to open!\n");
+      return -1;
+  }
+  if (Display)
     {
       // Create the window
       Window w = XCreateWindow(d, DefaultRootWindow(d), 0, 0, 200,
