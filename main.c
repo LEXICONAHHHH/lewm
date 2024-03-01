@@ -5,7 +5,7 @@
 int main()
 {
   // Open a display
-  Display* display = XOpenDisplay();
+  Display* display = XOpenDisplay(0);
 
   if (display == NULL)
   {
